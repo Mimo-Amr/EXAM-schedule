@@ -1,33 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Schedule</title>
-</head>
-<body>
-    <h1>Exam Schedule</h1>
-    <table>
-        <tr>
-            <th>Subject</th>
-            <th>Exam Date</th>
-            <th>Exam Time (Egypt Time)</th>
-        </tr>
-        <tr>
-            <td>Math</td>
-            <td>2026-04-20</td>
-            <td>08:00 PM</td>
-        </tr>
-        <tr>
-            <td>Science</td>
-            <td>2026-04-21</td>
-            <td>09:30 PM</td>
-        </tr>
-        <tr>
-            <td>History</td>
-            <td>2026-04-22</td>
-            <td>10:45 AM</td>
-        </tr>
-    </table>
-</body>
-</html>
+<script>
+  // Function to convert 24-hour time to 12-hour format with AM/PM
+  function convertTo12HourFormat(time) {
+      const [hours, minutes] = time.split(':').map(Number);
+      const suffix = hours >= 12 ? 'PM' : 'AM';
+      const formattedHour = hours % 12 === 0 ? 12 : hours % 12;
+      return `${formattedHour}:${minutes.toString().padStart(2, '0')} ${suffix}`;
+  }
+
+  // Function to get current Egypt time
+  function updateClock() {
+      const utcDate = new Date(new Date().toUTCString());
+      const options = { timeZone: 'Africa/Cairo', hour: '2-digit', minute: '2-digit', hour12: true };
+      const timeString = utcDate.toLocaleString('en-US', options);
+      document.getElementById('clock').innerText = `Egypt Time: ${timeString}`;
+  }
+
+  // Example function to update exam times
+  function updateExamTimes() {
+      const examElements = document.querySelectorAll('.exam-time'); // Assuming .exam-time is a class for the times
+      examElements.forEach((element) => {
+          const originalTime = element.innerText; // Get the text content
+          element.innerText = convertTo12HourFormat(originalTime); // Update the text
+      });
+  }
+
+  // Call the functions on page load
+  document.addEventListener('DOMContentLoaded', () => {
+      updateClock();
+      updateExamTimes();
+  });
+</script>
