@@ -6,7 +6,7 @@
     "enabled": true
   },
   "assets": {
-    "directory": "igcse-2026"
+    "directory": "igcse-2026-pwa"
   },
   "compatibility_flags": [
     "nodejs_compat"
