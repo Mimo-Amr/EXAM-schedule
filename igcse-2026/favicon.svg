@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- background -->
+  <rect width="32" height="32" rx="7" fill="#09090f"/>
+
+  <!-- particle network lines -->
+  <line x1="6"  y1="7"  x2="16" y2="13" stroke="#f4a13a" stroke-width="1"   stroke-opacity="0.5"/>
+  <line x1="26" y1="7"  x2="16" y2="13" stroke="#f4a13a" stroke-width="1"   stroke-opacity="0.5"/>
+  <line x1="16" y1="13" x2="25" y2="23" stroke="#f4a13a" stroke-width="0.9" stroke-opacity="0.4"/>
+  <line x1="16" y1="13" x2="7"  y2="24" stroke="#f4a13a" stroke-width="0.9" stroke-opacity="0.4"/>
+  <line x1="6"  y1="7"  x2="7"  y2="24" stroke="#f4a13a" stroke-width="0.7" stroke-opacity="0.25"/>
+  <line x1="26" y1="7"  x2="25" y2="23" stroke="#f4a13a" stroke-width="0.7" stroke-opacity="0.25"/>
+
+  <!-- outer dots -->
+  <circle cx="6"  cy="7"  r="2.2" fill="#f4a13a" opacity="0.85"/>
+  <circle cx="26" cy="7"  r="1.9" fill="#f4a13a" opacity="0.70"/>
+  <circle cx="7"  cy="24" r="1.9" fill="#f4a13a" opacity="0.70"/>
+  <circle cx="25" cy="23" r="1.7" fill="#f4a13a" opacity="0.60"/>
+
+  <!-- centre node -->
+  <circle cx="16" cy="13" r="3.5" fill="#f4a13a"/>
+  <circle cx="16" cy="13" r="1.6" fill="#09090f" opacity="0.75"/>
+</svg>
